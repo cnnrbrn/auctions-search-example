@@ -1,6 +1,7 @@
 import { search } from "../../api/listings/search.js";
 import displaySearchResults from "../../ui/listings/displaySearchResults.js";
 import hideSearchResults from "../../ui/listings/hideSearchResults.js";
+import displaySearchError from "../../ui/listings/displaySearchError.js";
 
 export default function handleSearch() {
 	const input = document.querySelector("#search");
@@ -21,5 +22,6 @@ async function doSearch(event) {
 		displaySearchResults(results);
 	} catch (err) {
 		console.log(err);
+		displaySearchError();
 	}
 }
