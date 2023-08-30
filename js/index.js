@@ -1,9 +1,11 @@
 import handleSearch from "./handlers/listings/handleSearch.js";
+import handleHideResultsOnDocumentClick from "./handlers/listings/handleHideResultsOnDocumentClick.js";
 
 function router() {
 	const path = window.location.pathname;
 
 	handleSearch();
+	handleHideResultsOnDocumentClick();
 
 	switch (path) {
 		case "/":
